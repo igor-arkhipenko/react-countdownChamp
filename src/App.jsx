@@ -6,23 +6,25 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            deadLine: 'December 25, 2017',
+            deadline: 'December 25, 2017',
             newDeadline: ''
         }
     }
 
     changeDeadline() {
         console.log('state', this.state);
-        this.setState({deadLine: this.state.newDeadline})
+        this.setState({deadline: this.state.newDeadline})
     }
 
     render() {
         return (
             <div className="App">
                 <div className="App-title">
-                    Countdown to {this.state.deadLine}
+                    Countdown to {this.state.deadline}
                 </div>
-                <Clock />
+                <Clock
+                    deadline={this.state.deadline}
+                />
                 <div>
                     <input
                         placeholder='new date'
