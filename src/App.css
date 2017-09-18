@@ -11,4 +11,5 @@
 .Clock-days, .Clock-hours, .Clock-minutes, .Clock-seconds {
     display: inline;
     margin: 10px;
+    font-size: 35px;
 }
